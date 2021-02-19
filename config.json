@@ -1,0 +1,8 @@
+{     
+    "name": "dy7",     
+    "company": "星邦互动", 
+    "version": "0.0.1",      
+    "config": {         
+        "play_direction": 1
+    } 
+} 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>douyin7</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://qzs.qq.com/union/res/union_sdk/page/unjs/unsdk.js"></script>
+    <!-- 移动端适配 -->
+    <script>
+        var html = document.querySelector('html');
+        changeRem();
+        window.addEventListener('resize', changeRem);
+        function changeRem() {
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 10 + 'px';
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- <div class="logoDiv">
+            <img class="logo" src="images/logo.png" alt="">
+        </div> -->
+
+        <!--第一页-->
+        <div class="page1">
+            <div class="logoDiv">
+                <img class="logo" src="images/logo.png" alt="">
+            </div>
+            <div class="load">
+                <!-- <img src="images/11.png" alt="" class="cli"> -->
+                <div class="loadDiv">
+                    <img src="images/click.png" alt="" class="loadImg">
+                </div>
+            </div>
+        </div>
+        <!--第二页-->
+        <div class="page2">
+            <!-- <div class="videoDiv">
+                <video id="videoid" src="video/movie_03.mp4" webkit-playsinline="false" playsinline="false"></video>
+            </div> -->
+            <div id="app" class="app">
+                <video  id="my-video" poster="images/2.jpg" src="video/movie.mp4" x5-video-player-fullscreen="true"
+                x5-playsinline preload="auto"
+                webview.allowsInlineMediaPlayback = YES;
+                x5-video-player-type="h5" webkit-playsinline="false" playsinline="false"  width="100%" height="100%"></video>
+            </div>
+            <!-- <div id="app" class="app">
+            <video id="my-video" v-show="os!=='iOS'"
+               class="video"
+               x5-video-player-fullscreen="true"
+                   x5-playsinline preload="auto"
+                   webview.allowsInlineMediaPlayback = YES;
+                   x5-video-player-type="h5"
+                   webkit-playsinline
+                   playsinline
+
+            >
+          <source src="video/movie.mp4" type="video/mp4">
+
+        </video> -->
+        
+　　
+            <img src="images/bj.png" alt="" class="mask">
+        </div>
+
+        <!--第三页-->  
+        <div class="page3"  style="display: none;">
+            <div class="touxiang">
+                <img src="images/touxiang.png" alt="" class="txImg">
+                <img src="images/aixin.png" alt="" class="aixin">
+                <img src="images/zi.png" alt="" class="name">
+            </div>
+            <div class="but">
+                <img src="images/dianjiguanzhu.png" alt="" class="down" id="down">
+                <img src="images/down.png" alt="" class="down" id="downup">
+            </div>
+            <img src="images/shou.png" alt="" class="hand">
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        window.GDTUnSdk && new window.GDTUnSdk({
+                    type: 'playable', // String - 类型：互动（试玩）广告
+                    container: 'down', // String - 转化按钮容器ID值
+                    // Function：转化按钮成功回调方法
+                    onSuccess: function(res) {
+                        console.log(res);
+                    },
+                    // Function：实例化异常回调方法
+                    onError: (res) => {
+                        console.log(res);
+                    }
+                })
+
+                window.GDTUnSdk && new window.GDTUnSdk({
+                    type: 'playable', // String - 类型：互动（试玩）广告
+                    container: 'downup', // String - 转化按钮容器ID值
+                    // Function：转化按钮成功回调方法
+                    onSuccess: function(res) {
+                        console.log(res);
+                    },
+                    // Function：实例化异常回调方法
+                    onError: (res) => {
+                        console.log(res);
+                    }
+                })
+    </script>
+</body>
+</html>
